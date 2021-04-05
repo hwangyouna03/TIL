@@ -7,6 +7,8 @@
     <ul>
       <li>data types, let과 var, hoisting 관련 학습</li>
       <li>operator, if, for loop 관련 학습 </li>
+      <li>Function, parameters, local scope 관련 학습 </li>
+     <li>class, getter&setters, fields, Inheritance 관련 학습 </li>
     </ul>
  </li>
 </ul>
