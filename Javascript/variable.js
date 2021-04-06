@@ -2,7 +2,7 @@
 
 //variable 변수
 // 1. let (added in ES6)
-let globalName = 'global name';
+let globalName = 'global name'; //전역변수
 {
     let name = 'ellie';
     console.log(name);
@@ -10,7 +10,7 @@ let globalName = 'global name';
     console.log(name);
 }
 
-console.log(name);
+//console.log(name); 지역변수
 console.log(globalName);
 
 //2. var 
@@ -91,7 +91,7 @@ console.log(`value: ${symbol1.description}, type ${typeof symbol1}`);
 const ellie = {name: 'ellie', age : 20};
 ellie.age = 21; //변경 가능
 
-//4. Dynamic typing : dynamically typed language
+//4. Dynamic typing : dynamically typed language 동적 입력: 동적입력 언어
 // => 선언할 때 어떤 타입인지 선언하지 않고 runtime,
 //      프로그램이 동작할 때 할당 된 갑셍 따라 type이 변경될 수 있음
 let text = 'hello';
