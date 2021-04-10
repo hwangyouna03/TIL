@@ -10,7 +10,7 @@
       <li>Function, parameters, local scope 관련 학습 </li>
      <li>class, getter&setters, fields, Inheritance 관련 학습 </li>
      <li>About object, Constructor Function 학습</li>
-     <li>Array 선언 및 접근 방법과 관련 메서드 선언 </li>
+     <li>Array 선언 및 접근 방법과 관련 메서드 선언 & 배열 함수 10가지 이상 관련 문제 풀어보기</li>
     </ul>
  </li>
 </ul>
