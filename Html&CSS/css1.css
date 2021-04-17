@@ -1,0 +1,42 @@
+/* selector {
+    property:value;
+} */
+
+/*모든 태그를 선택하는 태그*/
+* {
+    color : green;
+}
+
+/* type태그 (li) */
+li{
+    color: blue;
+}
+/*id 태그*/
+#special {
+    color:pink;
+}
+/*class 태그*/
+.red {
+    width: 100px;
+    height:100px;
+    padding :20px;
+    padding-top:100px;
+    padding-right:100px;
+    padding: 20px 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: pink;
+    border: 2px dashed red;
+    margin:20px;
+    background:yellow;
+}
+
+/*같은 버튼을 상태를 바꿔서 다른게 할 수 있음*/
+button:hover {
+    color:red;
+    background:beige;
+}
+/*링크 색깔 바꾸기 $를 붙이면 뒤에가.com인 애들만 바뀜 */
+a[href$=".com"] {
+    color:purple;
+}
