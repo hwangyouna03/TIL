@@ -16,6 +16,10 @@
     </ul>
  </li>
  <li>
-  React
+  HTML & CSS
+  <ul>
+   <li>Basic css tag 관련 학습</li>
+   <li>css layout - display, position 관련 학습</li>
+  </ul>
  </li>
 </ul>
