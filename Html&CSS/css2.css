@@ -1,0 +1,34 @@
+div, span{
+    width:80px;
+    height:80px;
+    margin:20px;
+    background:pink;
+}
+/*display:inline-block;*/
+div {
+    background:red;
+    display:inline;
+}
+span {
+    background:Blue;
+    display:block;
+}
+.container {
+    background:yelllow;
+    left:20px;
+    top:20px;
+    position: relative;
+}
+.box {
+    background:blue;
+    left:20px;
+    top:20px;
+    position: sticky;  
+}
+
+/*position
+기본값 : static
+relative를 쓰면 원래 있어야하는 자리에서 변경이 되고
+absolute를 쓰면 가까이에 있는 상자에서 위치 변경이 되고
+fixed를 쓰면 상자에서 벗어나서 page상에서 position이 지정이 되고
+sticky를 쓰면 원래 있던 자리에 존재하지만 scrolling하면 변하지않고 붙어있음*/
