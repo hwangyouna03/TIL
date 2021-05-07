@@ -12,9 +12,22 @@
 예시 출력
 40.000%
 */
-let C = prompt('학생 수 입력: ');
-for(let i = 0; i< C; i++){
-    let score = ('점수 입력: ');
+
+let num = prompt('학생 수 입력: '); //학생 수 입력=> N
+let total= 0;
+
+for(let i= 0; i< num; i++){ //학생 수 만큼 입력 받기
+    let score = prompt('점수 입력:'); //점수 입력=> C
     score = Number(score);
+    total = total + score;
 }
+
+//오류
+//let result = ((total/num)*100).tofixed(3); //소수점 나타내는 거 알아내기
+
+
+
+
+console.log(result);
+
 

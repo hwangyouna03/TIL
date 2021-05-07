@@ -2,12 +2,16 @@
 0보다 크거나 같은 정수 N이 주어진다. 이때, N!을 출력하는 프로그램을 작성하시오.
 
 https://www.acmicpc.net/problem/10872*/
-let result = 1;
-let N = prompt('정수 입력: ');
-for(let i = 1; i <=N; i++){
-    result = result * i;
+
+function factorial(N) {
+    let result = 1;
+    for(let i = 1; i <=N; i++){
+        result = result * i;
+    }
+    console.log(result);
 }
-console.log(result);
+factorial(3);
+
 
 /*피보나치
 피보나치 수는 0과 1로 시작한다. 0번째 피보나치 수는 0이고, 1번째 피보나치 수는 1이다.
@@ -18,14 +22,14 @@ n = 17일때 까지 피보나치 수를 써보면 다음과 같다.
 10을 입력하면 1+2+3+4+5+6+7+8+9+10
 10 -> 55
 */
+function fibonacci(n) {
+    let result1 = 0;
+    for(let j = 1; j <= n; j++){
+        result1 = result1+j;
+    }
+    console.log(result1);
+}fibonacci(10);
 
-let result1 = 0;
-let n = prompt('피보나치할 정수 입력: ');
-n = Number(n);
-for(let j = 1; j <= n; j++){
-    result1 = result1+j;
-}
-console.log(result1);
 
 /*별 찍기-10
 재귀적인 패턴으로 별을 찍어보자. N이 3의 거듭제곱(3, 9, 27..)이라고할 때,

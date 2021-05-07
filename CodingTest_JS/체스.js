@@ -10,24 +10,27 @@ F는 위에 말이 있는 칸이다.
 칸에서 확인하고 홀수번째 줄일 경우에는 홀수번째 칸에서 확인합니다.
 
 */
+//chess 문제 다시 이해하고 풀기
 
 function Chess(){
     var chessboard = [];
     for(let i = 0; i < 8; i++){
-        if(i%2 == 0){
-            document.write('흰');
-        }else if(i%2 == 1){
-            document.write('검');
+        if(i == 0){
+            document.write('W');
         }
-        for(let j = 0; j < 8; j++){
+        if(i%2 == 0){
+            document.write('W');
+        }else if(i%2 == 1){
+            document.write('B');
+        }
+        for(let j = 0; j < 7; j++){
             if(j%2 == 0){
-                document.write('흰');
+                document.write('W');
             }else if(j%2 == 1){
-                document.write('검');
+                document.write('B');
             }
         }
         document.write('<br>');
-       
     }
     
 }
