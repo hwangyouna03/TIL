@@ -22,4 +22,10 @@
    <li>css layout - display, position 관련 학습</li>
   </ul>
  </li>
+ <li>
+ CodingTest_JS
+  <ul>
+   <li>문법 기초관련 문제풀기 - 문자열, 배열, 재귀함수 호출</li>
+  </ul>
+ </li>
 </ul>
