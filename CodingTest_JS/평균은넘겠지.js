@@ -13,21 +13,40 @@
 40.000%
 */
 
-let num = prompt('학생 수 입력: '); //학생 수 입력=> N
+let input = [];
+/*let num = prompt('학생 수 입력: '); //학생 수 입력=> N
 let total= 0;
 
 for(let i= 0; i< num; i++){ //학생 수 만큼 입력 받기
     let score = prompt('점수 입력:'); //점수 입력=> C
     score = Number(score);
-    total = total + score;
+    total += score;
+    score++;
+    
 }
 
 //오류
-//let result = ((total/num)*100).tofixed(3); //소수점 나타내는 거 알아내기
-
-
-
-
-console.log(result);
+let result = (total/num*100).toFixed(3); 
+console.log(result);*/
+let n = Number(input[0]);
+    
+    for(let i = 1; i <= n; i++) {
+        let sum = 0;
+        let count = 0;
+        
+        let test = input[i].split(' ').map(x => Number(x));
+        
+        for(let j = 1; j <= test[0]; j++) {
+            sum += test[j];
+        }
+        
+        let avg = sum / test[0];
+        for(let j = 1; j <= test[0]; j++) {
+            if(test[j] > avg) {
+                count++;
+            }
+        }
+        console.log((count/test[0]*100).toFixed(3) + '%');
+    }
 
 
