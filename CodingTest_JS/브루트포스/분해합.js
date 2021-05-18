@@ -17,35 +17,10 @@ M의 분해합이 N인 경우, M을 N의 생성자라고 한다. 예를
 예제 출력: 198
 */
 function splitSum() {
-    let N = "216";
-    let sum = 0; 
-    let num =0;
-    let nums = new Array();
-    
-    //num = N.substring(0, N.length);
-    //num = Number(num);
-    //N = Number(N);
-    //nums.push(N); //nums라는 배열에 N 216을 넣음
-   
-    for(let i = 0; i < N.length; i++){
-        num = N.charAt(i);
-        nums.push(num);
+    const N = ["216"];
+    for(let i = 0; i<N.length; i++){
+        let sum = N[i]
     }
-    
-    console.log(nums);
-    
-    //ex -> 216이면 216 + 2 + 1+ 6을 더한 값 출력
-    for(let i = 0; i<=N.length; i++){ //0번째
-        for(let j = i+1; j<N.length; j++){
-            for(let k = j+1; k<N.length; k++){
-                sum = N + N[i] + N[j] + N[k];
-
-                
-            }
-        }
-    }
-    
-    console.log(sum);
 }
 splitSum();
 
