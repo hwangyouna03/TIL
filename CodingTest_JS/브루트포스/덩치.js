@@ -39,21 +39,24 @@ y가 하나의 공백을 두고 각각 나타난다.
         
  */
 function Size(){
-    let N = 5;
+    let N = 5; //전체 사람 수
     const input = ['55 185', '58 183', '88 186', '60 175', '46 155'];
     
     const kgCmTable = input.map(kgCm => kgCm.split(' ').map(num => parseInt(num))); 
+    //input.map(kgCm => kgCm.split(' '))은 ' '을 기준으로 문자를 나눠 map으로 나열함
     //.map(num => parseInt(num)) 이 부분은 문자를 숫자로 변환해줌.
+
     const rank = [];
     for(let i = 0; i < N; i++){
-        let counter = 0;
+        let counter = 0; //반드시 counter를 여기에 초기화 할 것
+        //등수가 달라짐
         for(let j = 0; j < N; j++){
             if(i != j){
                 if(
                     kgCmTable[i][0] < kgCmTable[j][0] &&
                     kgCmTable[i][1] < kgCmTable[j][1]
                 ) {
-                    counter++;
+                    counter++; //kgCmTable을 비교해 counter, 등수 올려줌
                 }
             }
         }
