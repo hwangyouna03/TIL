@@ -72,5 +72,37 @@ function APItest(){
         });
         console.log(result2);
     }
+}APItest();
+class Student {
+    constructor(name, age, enrolled, score) {
+        this.name = name;
+        this.age = age;
+        this.enrolled = enrolled;
+        this.score = score;
+    }
 }
-APItest();
+const students = [
+    new Student('A', 29, true, 45),
+    new Student('B', 28, false, 80),
+    new Student('C', 30, true, 90),
+    new Student('D', 40, false, 66),
+    new Student('E', 18, true, 88),
+];
+    
+//Q5. find a student with the score 90
+{
+    const result = students.find((student) => student.score === 90);
+    //const result = students.find(funtion(student)){
+        //return student.score == 90;
+    //});
+    console.log(result);
+    //find: 콜백함수를 만들어서 전달 
+}
+
+
+//Q6. make an array of enrolled student 수업 중인 학생들 찾기
+//enrolled -> true
+{
+    const result = student.filter((student) => student.enrolled);
+    console.log(result);
+}
