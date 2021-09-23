@@ -13,6 +13,7 @@
      <li>Array 선언 및 접근 방법과 관련 메서드 선언 & 배열 함수 10가지 이상 관련 문제 풀어보기</li>
      <li>Json vs XML & Json 선언 </li>
      <li>비동기 처리의 시작 Callback, Promise, asynic & await 관련 학습</li>
+     <li>javascript와 jquery 비교 / bootstrap 학습</li>
     </ul>
  </li>
  <li>
