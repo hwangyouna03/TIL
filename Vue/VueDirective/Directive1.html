@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <!-- v-text , v-html 예제 -->
+    <div id="simple">
+        <h2>1. v-text, v-html 예제 : message 값 가져오기</h2>
+        <!--<h2>{{message}}</h2>-->
+        <h2 v-text="message"></h2>
+    </div>
+    <!-- v-bind 예제 : message 값을 text박스에 넣어줌-->
+    <div id="simple2">
+        <h2>2. v-bind 예제</h2>
+        <input id="a" type="text" v-bind:value="message">
+        <br />
+        <img v-bind:src="imagePath"/>
+    </div>
+
+    <!-- v- model 예제 : textbox에 이름을 입력하면 입력된 이름이 뜨게 한다.
+    v-model은 textbox뿐만 아니라 checkbox등 여러 가지 입력 폼 필드에 사용 가능-->
+    <div id="simple3">
+        <h2>3. v-model 예제</h2>
+        <input type="text" v-model="name" placeholder="이름을 입력하세요"/>
+        <br />
+        입력된 이름 : <h2 v-html="name"></h2>
+    </div>
+
+    <script type="text/javascript">
+        var model = {
+            message : '첫 번째 Vue.js 앱입니다.'
+        };
+
+        var simple = new Vue({
+            el : '#simple',
+            data : model
+        })
+        //개발자 도구에 model.message = "hello Vue.js";를 치면 message 내용이 바뀜
+
+        var model2 = {
+            message : 'v-bind 디렉티브',
+            imagePath : "https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg"
+        };
+
+        var simple2 = new Vue({
+            el : '#simple2',
+            data : model2
+        })
+
+       var twoway = new Vue({
+           el : '#simple3',
+           data : {
+               name : ''
+           }
+       })
+
+      
+    </script>
+</body>
+</html>

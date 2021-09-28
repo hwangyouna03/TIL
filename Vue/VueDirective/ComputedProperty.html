@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="example">
+        <input type="text" v-model="num" /><br />
+        1부터 입력된 수까지의 합 : <span>{{sum}}</span>
+    </div>
+    <script type="text/javascript">
+    var vmSum = new Vue({
+        el: '#example',
+        data : {num : 0},
+        computed : {
+            sum : function() {
+                //HTML 요소 내부에서는 문자열이기 때문에 Number()함수나 parseInt() 함수를 이용해 숫자 값으로 변환해주어야 함.
+                var n = Number(this.num); 
+                //isNaN()은 어떤 값이 NaN(산술 연산이 정의 되지 않거나 표현할 수 없는 결과)인지 판별
+                if(Number.isNaN(n) || n < 1) return 'NaN.';
+                return ((1 + n ) * n) /2;
+            }
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el, data, computed Option</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+<body>
+    <div id="test">
+        {{name}}
+    </div>
+    <script type="text/javascript">
+    var model = {
+        name : "홍길동" //이름 변경하고 싶을 때(개발자 도구) : vm.name = "바꾸고 싶은 이름"
+    }
+    var vm = new Vue({
+        el: '#test',
+        data : model
+    })
+    </script>
+    <br>
+    <hr />
+    
+    <br>
+    <hr />
+    <!--계산형 속성의 getter/setter 메서드-->
+    <div id="ex">
+        금액 : <span>{{amount}}원 </span>
+    </div>
+    <script type="text/javascript">
+    var vm = new Vue({
+        el : '#ex',
+        data : {amt : 1234567},
+        computed : {
+            amount : {
+                //getter : 데이터 속성인 amt 값을 숫자 3자리마다 쉼표를 넣어 리턴
+                get : function() { 
+                    var s = new String("" + this.amt); //숫자를 문자로 변환 
+                    var result = "";
+                    var num = 0;
+                    //맨 뒷자리부터 하나씩 문자를 result 변수에 붙이면서 3자리마다 한번 씩(,)를 붙임
+                    for(var i = s.length-1; i>=0; i--) { 
+                        result = s[i] + result;
+                        if(num % 3 == 2 && i !=0)
+                            result = "," + result;
+                        num++;
+                    }
+                    return result; //과정 거친 문자열 리턴
+                },
+                //setter : 문자열을 입력받으면 쉼표(,)를 제거한 뒤 숫자 값으로 변환해 amt 데이터 속성에 할당
+                set : function(amt) {
+                    if(typeof(amt) === "string") {
+                        var result = parseInt(amt.replace(/,/g,""))
+                        //숫자로 변환이 불가능한 값이 들어오는 경우, 숫자 0으로 할당
+                        if(isNaN(result)) this.amt = 0;
+                        else this.amt = result;
+                    }else if(typeof(amt) === "number")
+                        this.amt = amt;
+                }
+            }
+        }
+    });
+    </script>
+</body>
+</html>
