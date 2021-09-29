@@ -15,12 +15,13 @@
         나이 : <input type="text"><br>
         이메일 : <input type="text" placeholder="@형태로 적어주세요"/><br>
         성별 : <input type="checkbox" value="1">여자 <input type="checkbox" value="2">남자<br>
-        <input type="button" value="완료" >
+        <button id="submit" v-on:click="signup" value="완료" >
     <script>
         var model = {
             message : "회원가입하기"
             
-        }
+        },
+       
         var signuplist = new Vue({
             el : '#example',
             data : model

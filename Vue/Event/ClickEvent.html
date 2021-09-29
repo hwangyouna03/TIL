@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {margin:0; padding:0;}
+        #example {
+            height : 98vh; min-height :100%; padding: 5px
+        }
+    </style>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="example" v-on:contextmenu="ctxStop">
+        <a href="https://facebook.com" @click="confirmFB">페이스북</a>
+    </div>
+    <script type="text/javascript">
+    var vm = new Vue({
+        el : '#example',
+        methods : {
+            ctxStop : function(e) {
+                e.preventDefault(); // 내장 컨텍스트 메뉴는 나타나지 않음
+            },
+            confirmFB : function(e) { //confirmFB 메서드는 사용자에게 확인을 받기 위해서 confirm() 함수 사용
+                if(!confirm("페이스북으로 이동할까요?")) {
+                    e.preventDefault(); //이 메서드 내부에서 기본 이벤트 실행을 막기 위해서 호출
+                }
+            }
+        }
+    })
+
+    </script>
+</body>
+</html>
